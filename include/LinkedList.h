@@ -1,25 +1,37 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
-#include <cstddef>
+#include <string>
+#include <iostream>
 
 class LinkedList {
+private:
+    class Node {
+    public:
+        std::string data;
+        Node* next;
+        Node(const std::string& val);
+        ~Node();
+    };
+
+    Node* head;
+    int length;
+
 public:
     LinkedList();
     ~LinkedList();
 
-    void push_front(int value);
-    bool remove(int value);
-    bool contains(int value) const;
-    size_t size() const;
+    bool isEmpty() const;
+    bool isFull() const;
+    int getLength() const;
 
-private:
-    struct Node {
-        int data;
-        Node* next;
-    };
-    Node* head;
-    size_t count;
+    void insertAtEnd(const std::string& data);
+    const std::string& getDataAt(int index) const;
+    int search(const std::string& value) const;
+
+    void printList() const;
+    void removeDuplicates();
+    void makeCircular();
 };
 
 #endif // LINKEDLIST_H

@@ -1,46 +1,131 @@
-#include "LinkedList.h"
+#include "linkedlist.h"
 
-LinkedList::LinkedList() : head(nullptr), count(0) {}
+LinkedList::Node::Node(const std::string& val)
+    : data(val), next(nullptr)
+{}
+
+LinkedList::Node::~Node() = default;
+
+LinkedList::LinkedList()
+    : head(nullptr), length(0)
+{}
 
 LinkedList::~LinkedList() {
-    Node* current = head;
-    while (current) {
-        Node* toDelete = current;
-        current = current->next;
-        delete toDelete;
+    if (head) {
+        //break potential circular link
+        Node* tail = head;
+        while (tail->next && tail->next != head)
+            tail = tail->next;
+        if (tail->next == head)
+            tail->next = nullptr;
+    }
+    //delete all nodes
+    Node* cur = head;
+    while (cur) {
+        Node* tmp = cur;
+        cur = cur->next;
+        delete tmp;
     }
 }
 
-void LinkedList::push_front(int value) {
-    Node* node = new Node{value, head};
-    head = node;
-    ++count;
+bool LinkedList::isEmpty() const {
+    return head == nullptr;
 }
 
-bool LinkedList::remove(int value) {
-    Node** pp = &head;
-    while (*pp) {
-        if ((*pp)->data == value) {
-            Node* toDelete = *pp;
-            *pp = toDelete->next;
-            delete toDelete;
-            --count;
-            return true;
+bool LinkedList::isFull() const {
+    Node* tmp = nullptr;
+    try {
+        tmp = new Node(std::string());
+    } catch (...) {
+        return true;
+    }
+    delete tmp;
+    return false;
+}
+
+int LinkedList::getLength() const {
+    return length;
+}
+
+void LinkedList::insertAtEnd(const std::string& data) {
+    Node* newNode = new Node(data);
+    if (isEmpty()) {
+        head = newNode;
+    } else {
+        Node* cur = head;
+        while (cur->next && cur->next != head)
+            cur = cur->next;
+        cur->next = newNode;
+    }
+    ++length;
+}
+
+const std::string& LinkedList::getDataAt(int index) const {
+    static const std::string empty;
+    if (index < 0 || index >= length) {
+        std::cerr << "Error: index out of bounds\n";
+        return empty;
+    }
+    Node* cur = head;
+    for (int i = 0; i < index; ++i)
+        cur = cur->next;
+    return cur->data;
+}
+
+int LinkedList::search(const std::string& value) const {
+    Node* cur = head;
+    int idx = 0;
+    while (cur && idx < length) {
+        if (cur->data == value)
+            return idx;
+        cur = cur->next;
+        ++idx;
+    }
+    return -1;
+}
+
+void LinkedList::printList() const {
+    if (isEmpty()) {
+        std::cout << "List is empty\n";
+        return;
+    }
+    Node* cur = head;
+    int count = 0;
+    while (cur && count < length) {
+        std::cout << cur->data << ' ';
+        cur = cur->next;
+        ++count;
+    }
+    std::cout << '\n';
+}
+
+void LinkedList::removeDuplicates() {
+    if (isEmpty()) return;
+    Node* cur = head;
+    while (cur) {
+        Node* runner = cur;
+        while (runner->next && runner->next != head) {
+            if (runner->next->data == cur->data) {
+                Node* dup = runner->next;
+                runner->next = dup->next;
+                delete dup;
+                --length;
+            } else {
+                runner = runner->next;
+            }
         }
-        pp = &(*pp)->next;
+        cur = cur->next;
+        if (cur == head) break;
     }
-    return false;
 }
 
-bool LinkedList::contains(int value) const {
-    Node* current = head;
-    while (current) {
-        if (current->data == value) return true;
-        current = current->next;
+void LinkedList::makeCircular() {
+    if (isEmpty()) {
+        std::cerr << "Cannot make an empty list circular\n";
+        return;
     }
-    return false;
-}
-
-size_t LinkedList::size() const {
-    return count;
+    Node* cur = head;
+    while (cur->next && cur->next != head)
+        cur = cur->next;
+    cur->next = head;
 }
