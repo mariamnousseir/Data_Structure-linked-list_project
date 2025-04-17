@@ -58,10 +58,10 @@ Is list full? No
 Test 9: Retrieve data at an out-of-bounds index (index 100) Expected Output:
 Correctly handled out of bounds request
 
-# ******************************************************************************
+# ************************************************************************
 # Data_Structure-linked-list_project
 # Milestone 2: Implemintation of the Expression converter application
-# ******************************************************************************
+# ************************************************************************
 
 # Author: Mariam Nousseir (ID: 900182741) did the following: 
 I created the following new files:
