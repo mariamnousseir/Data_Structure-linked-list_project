@@ -1,6 +1,6 @@
 # Data_Structure-linked-list_project
 # Milestone 1: Implemintation of the data structure for the program 
-A C++ Singly‑Linked List Implementation for the Stack
+A C++ Linked List Implementation for the Stack
 
 # Author: Mariam Nousseir (ID: 900182741) did the following: 
 
