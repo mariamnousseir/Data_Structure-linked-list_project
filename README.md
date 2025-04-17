@@ -4,7 +4,10 @@ A C++ Linked List Implementation for the Stack
 
 # Author: Mariam Nousseir (ID: 900182741) did the following: 
 
-create the Repository  and did Structure with all files 
+create the Repository  and did Structure with all files.
+then Clone the Repo to the Local Machine.
+Added the Files to Git Tracking.
+Committed the Changes and pushed to gethub.
 include/LinkedList.h :header file containing the definition of the LinkedList class and its nested Node class.
 src/linkedlist.cpp:file conatining the implementation of each function.
 src/main.cpp ; file containing test cases for the functions. 
@@ -54,6 +57,22 @@ Is list full? No
 
 Test 9: Retrieve data at an out-of-bounds index (index 100) Expected Output:
 Correctly handled out of bounds request
+
+# ******************************************************************************
+# Data_Structure-linked-list_project
+# Milestone 2: Implemintation of the Expression converter application
+# ******************************************************************************
+
+# Author: Mariam Nousseir (ID: 900182741) did the following: 
+I created the following new files:
+include/stack.h — Header file for the custom stack implementation
+include/tokenizer.h — Header file for the tokenizer logic
+include/converter.h — Header file for the infix/postfix/prefix conversion logic
+src/milestone2_main.cpp — The main application file for CLI interaction
+These were added in a clear folder structure (include/ and src/) to keep the project modular and maintainable.
+Added the Files to Git Tracking.
+Committed the Changes and pushed to gethub.
+
 
 
 
