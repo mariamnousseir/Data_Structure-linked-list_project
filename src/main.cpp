@@ -89,6 +89,54 @@ int main() {
     cout << "List after swapping nodes: ";
     list.printList();
 
+    cout << "\nTest 14: Node-based operations\n";
+    LinkedList::Node* h = nullptr;
+    list.appendNode(h, 1);
+    list.appendNode(h, 2);
+    list.appendNode(h, 3);
+    list.appendNode(h, 4);
+    list.appendNode(h, 5);
+    list.appendNode(h, 6);
+    list.appendNode(h, 7);
+    list.appendNode(h, 8);
+    list.appendNode(h, 9);
+    list.appendNode(h, 10);
+
+    list.printList(h);
+
+    cout << "Test 15: Reverse recursive\n";
+    LinkedList::Node* rev = list.reverseList(h);
+    list.printList(rev);
+
+    cout << "Test 16: Reverse in groups of 2\n";
+    LinkedList::Node* grp = list.reverseKGroup(rev, 2);
+    list.printList(grp);
+
+    cout << "Test 17: Previous of second node\n";
+    auto prev = list.getPreviousNode(grp, grp->next);
+    cout << (prev? prev->data : string("null")) << "\n";
+
+    cout << "Test 18: Middle node\n";
+    auto mid = list.getMiddleNode(grp);
+    cout << (mid? mid->data : string("null")) << "\n";
+
+    cout << "Test 19: 2nd from end\n";
+    auto nthEnd = list.getNthFromEnd(grp, 2);
+    cout << (nthEnd? nthEnd->data : string("null")) << "\n";
+
+    cout << "Test 20: 1st index\n";
+    auto nth = list.getNthNode(grp, 1);
+    cout << (nth? nth->data : string("null")) << "\n";
+
+    cout << "Test 21: Head & Tail\n";
+    auto headNode = list.getHead(grp);
+    auto tailNode = list.getTail(grp);
+    cout << (headNode? headNode->data : string("null")) << ", " << (tailNode? tailNode->data : string("null")) << "\n";
+
+    cout << "Test 22: Free list\n";
+    list.freeList(grp);
+    list.printList(grp);
+
 
     cout << "\nAll Tests Completed\n";
     return 0;

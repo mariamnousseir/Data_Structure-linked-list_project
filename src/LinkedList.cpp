@@ -1,4 +1,5 @@
-#include "linkedlist.h"
+#include "LinkedList.h"
+#include <string>
 
 LinkedList::Node::Node(const string& val)
     : data(val), next(nullptr)
@@ -217,4 +218,82 @@ LinkedList::Node *LinkedList::getNodeAt(int index) const {
     }
     return cur;
 }
+LinkedList::Node* LinkedList::createNode(int data) {
+    return new Node(to_string(data));
+}
 
+void LinkedList::appendNode(Node*& h, int data) {
+    Node* n = createNode(data);
+    if (!h) h=n;
+    else { Node* cur=h; while(cur->next) cur=cur->next; cur->next=n; }
+}
+
+LinkedList::Node* LinkedList::reverseList(Node* h) {
+    if (!h||!h->next) return h;
+    Node* newH = reverseList(h->next);
+    h->next->next = h;
+    h->next = nullptr;
+    return newH;
+}
+
+LinkedList::Node* LinkedList::reverseKGroup(Node* h, int k) {
+    if(k<=1||!h) return h;
+    Node dummy(""), *prev=&dummy;
+    dummy.next = h;
+    int count=0; for(Node* cur=h; cur; cur=cur->next) ++count;
+    while(count>=k){
+        Node* start=prev->next, *end=start;
+        for(int i=1;i<k;++i) end=end->next;
+        Node* nxt = end->next;
+        // reverse
+        Node* p=nxt;
+        for(Node* c=start; c!=nxt; ){ Node* t=c->next; c->next=p; p=c; c=t; }
+        prev->next=p;
+        prev=start;
+        count-=k;
+    }
+    return dummy.next;
+}
+
+LinkedList::Node* LinkedList::getPreviousNode(Node* h, Node* target) {
+    if(!h||h==target) return nullptr;
+    for(Node* cur=h; cur->next; cur=cur->next)
+        if(cur->next==target) return cur;
+    return nullptr;
+}
+
+LinkedList::Node* LinkedList::getMiddleNode(Node* h) {
+    Node *slow=h, *fast=h;
+    while(fast&&fast->next){ slow=slow->next; fast=fast->next->next; }
+    return slow;
+}
+
+LinkedList::Node* LinkedList::getNthFromEnd(Node* h, int k) {
+    Node *fast=h,*slow=h;
+    for(int i=0;i<k&&fast;i++) fast=fast->next;
+    while(fast){ slow=slow->next; fast=fast->next; }
+    return slow;
+}
+
+LinkedList::Node* LinkedList::getNthNode(Node* h, int n) {
+    for(int i=0; i<n&&h; ++i) h=h->next;
+    return h;
+}
+
+LinkedList::Node* LinkedList::getHead(Node* h) { return h; }
+LinkedList::Node* LinkedList::getTail(Node* h) { Node* cur=h; while(cur&&cur->next) cur=cur->next; return cur; }
+
+void LinkedList::printList(Node* h) {
+    if(!h){ cout<<"List is empty"<<endl; return; }
+    Node* cur=h;
+    while(cur){ cout<<cur->data; if(cur->next) cout<<" -> "; cur=cur->next; }
+    cout<<" -> NULL"<<endl;
+}
+
+void LinkedList::freeList(Node* h) {
+    while(h){ Node* t=h->next; delete h; h=t; }
+}
+
+void LinkedList::reverseLinkedList() {
+    head = reverseList(head);
+}
