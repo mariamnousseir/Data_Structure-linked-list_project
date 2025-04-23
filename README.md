@@ -82,6 +82,48 @@ These were added in a clear folder structure (include/ and src/) to keep the pro
 Added the Files to Git Tracking.
 Committed the Changes and pushed to gethub.
 
+converter.h Setup: 
+
+I Added include guard (#ifndef … #endif) and included <string>, stack.h, tokenizer.h.
+
+Operator Helpers:
+
+precedence(op) returns 3 for ^, 2 for *//, 1 for +/-, else 0.
+
+isOperator(t) checks for +, -, *, /, ^.
+
+Infix → Postfix
+
+infixToPostfix(tokens) uses the shunting-yard:
+
+Operands → output,
+
+( pushed, ) pops until matching (,
+
+Operators pop higher/equal precedence (left-associative except ^), then push.
+
+Infix → Prefix
+
+infixToPrefix(tokens): reverse list & swap (/), call infixToPostfix(), then reverse result.
+
+Postfix → Infix
+
+postfixToInfix(tokens): push operands on a stack; on operator pop two, wrap as "(a op b)", push back; finally re-tokenize.
+
+Full CLI Implementation
+
+I Implemented the entire milestone2_main.cpp, including:
+
+A printList() helper to display token lists.
+
+A REPL loop to select notation (Infix/Postfix/Prefix), read expressions, invoke the two relevant conversion functions, handle errors with try/catch, and exit cleanly on choice 4.
+
+Memory Safety
+
+Every new TokenList() is paired with a delete.
+
+Stack<string> instances auto-cleanup on scope exit.
+
 
 
 
