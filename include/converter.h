@@ -85,7 +85,22 @@ inline TokenList* postfixToInfix(TokenList* tokens) {
     return tokenize(st.pop());             //tokenize and return the final expression
 }
 //*******************************************************************************************************//
-
+// Convert postfix to prefix notation
+inline TokenList* postfixToPrefix(TokenList* tokens) {
+    Stack<string> st;                      // Stack for building prefix strings
+    while (!tokens->isEmpty()) {
+        string t = tokens->popFront();
+        if (!isOperator(t))
+            st.push(t);                    // Operand: push
+        else {
+            // Operator: pop b then a, form "op a b"
+            string b = st.pop();
+            string a = st.pop();
+            st.push(t + " " + a + " " + b);
+        }
+    }
+    return tokenize(st.pop());             // Tokenize the prefix string
+}
 
 
 
