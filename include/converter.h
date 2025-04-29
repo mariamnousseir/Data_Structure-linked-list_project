@@ -121,28 +121,21 @@ inline TokenList* prefixToInfix(TokenList* tokens) {
 }
 //*******************************************************************************************************//
 //Convert prefix to postfix by similar reverse-and-stack method
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+inline TokenList* prefixToPostfix(TokenList* tokens) {
+  tokens->reverse(); //reverse tokens first
+  Stack<string> st;  //stack for building postfix strings
+  while (!tokens->isEmpty()) {
+    string t = tokens->popFront();
+    if (!isOperator(t))
+      st.push(t);  //operand: push
+    else {
+      //operator: pop a then b, ("a b operator")
+      string a = st.pop();
+      string b = st.pop();
+      st.push(a+""+b+""+t);
+    }
+  }
+  return tokenize(st.pop()); //tokenize the postfix string
+}
+//*******************************************************************************************************//
 #endif // CONVERTER_H
