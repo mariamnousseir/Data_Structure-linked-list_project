@@ -104,20 +104,22 @@ inline TokenList* postfixToPrefix(TokenList* tokens) {
 //*******************************************************************************************************//
 // Convert prefix to infix by reversing tokens and using a stack
 inline TokenList* prefixToInfix(TokenList* tokens) {
-  tokens->reverse();  //reverse token order for stack-friendly parsing
-  Stack<string> st;   //stack for building infix strings
+  tokens->reverse();  //reverse token order to process prefix expressions from right to left, also because stacks are LIFO structure
+  Stack<string> st;   //stack for building infix strings called st
+  //loop through tokens in reversed order and check if token is an operator or operand
   while (!tokens->isEmpty()) {
     string t = tokens->popFront();
-    if (!isOperator(t))
+    if (!isOperator(t)) //if token is not an operator(A,B,1) , push into the stack
       st.push(t);   //operand: push
-    else {
+    else { //token is an operator(+,-,*,/)
       //operator: pop a then b, "(a operator b)"
+      //pop two operands from stack and combine the operands with the operator
       string a = st.pop();
       string b = st.pop();
-      st.push("(" + a + " " + t + " " + b + ")");
+      st.push("(" + a + " " + t + " " + b + ")"); //push back combined expression onto the stack
     }
   }
-  return tokenize(st.pop());   //tokenize the infix string
+  return tokenize(st.pop());   //tokenize the infix string(split into tokens) and return token list
 }
 //*******************************************************************************************************//
 //Convert prefix to postfix by similar reverse-and-stack method
