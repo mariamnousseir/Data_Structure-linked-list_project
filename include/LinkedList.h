@@ -36,12 +36,18 @@ public:
     void insertAtPosition(int position, const string& data);
     void swapNodes(NodePtr node1, NodePtr node2);
 
+    void deleteAtHead();
+    void deleteAtTail();
+    void deleteAtPosition(int position);
+    void deleteByValue(char* value);
+
     const string& getDataAt(int index) const;
     int search(const string& value) const;
 
     void printList() const;
     void removeDuplicates();
     void makeCircular();
+    bool isCircular() const;
     NodePtr getNodeAt(int index) const;
 
     // Node-based utilities (no STL)

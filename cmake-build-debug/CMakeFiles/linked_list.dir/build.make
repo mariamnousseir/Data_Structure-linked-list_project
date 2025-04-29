@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project
+CMAKE_SOURCE_DIR = /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/linked_list.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/linked_list.dir/progress.make
 include CMakeFiles/linked_list.dir/flags.make
 
 CMakeFiles/linked_list.dir/src/LinkedList.cpp.o: CMakeFiles/linked_list.dir/flags.make
-CMakeFiles/linked_list.dir/src/LinkedList.cpp.o: /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/src/LinkedList.cpp
+CMakeFiles/linked_list.dir/src/LinkedList.cpp.o: /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/src/LinkedList.cpp
 CMakeFiles/linked_list.dir/src/LinkedList.cpp.o: CMakeFiles/linked_list.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/linked_list.dir/src/LinkedList.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linked_list.dir/src/LinkedList.cpp.o -MF CMakeFiles/linked_list.dir/src/LinkedList.cpp.o.d -o CMakeFiles/linked_list.dir/src/LinkedList.cpp.o -c /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/src/LinkedList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/linked_list.dir/src/LinkedList.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linked_list.dir/src/LinkedList.cpp.o -MF CMakeFiles/linked_list.dir/src/LinkedList.cpp.o.d -o CMakeFiles/linked_list.dir/src/LinkedList.cpp.o -c /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/src/LinkedList.cpp
 
 CMakeFiles/linked_list.dir/src/LinkedList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/linked_list.dir/src/LinkedList.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/src/LinkedList.cpp > CMakeFiles/linked_list.dir/src/LinkedList.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/src/LinkedList.cpp > CMakeFiles/linked_list.dir/src/LinkedList.cpp.i
 
 CMakeFiles/linked_list.dir/src/LinkedList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/linked_list.dir/src/LinkedList.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/src/LinkedList.cpp -o CMakeFiles/linked_list.dir/src/LinkedList.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/src/LinkedList.cpp -o CMakeFiles/linked_list.dir/src/LinkedList.cpp.s
 
 CMakeFiles/linked_list.dir/src/main.cpp.o: CMakeFiles/linked_list.dir/flags.make
-CMakeFiles/linked_list.dir/src/main.cpp.o: /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/src/main.cpp
+CMakeFiles/linked_list.dir/src/main.cpp.o: /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/src/main.cpp
 CMakeFiles/linked_list.dir/src/main.cpp.o: CMakeFiles/linked_list.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/linked_list.dir/src/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linked_list.dir/src/main.cpp.o -MF CMakeFiles/linked_list.dir/src/main.cpp.o.d -o CMakeFiles/linked_list.dir/src/main.cpp.o -c /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/linked_list.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linked_list.dir/src/main.cpp.o -MF CMakeFiles/linked_list.dir/src/main.cpp.o.d -o CMakeFiles/linked_list.dir/src/main.cpp.o -c /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/src/main.cpp
 
 CMakeFiles/linked_list.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/linked_list.dir/src/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/src/main.cpp > CMakeFiles/linked_list.dir/src/main.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/src/main.cpp > CMakeFiles/linked_list.dir/src/main.cpp.i
 
 CMakeFiles/linked_list.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/linked_list.dir/src/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/src/main.cpp -o CMakeFiles/linked_list.dir/src/main.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/src/main.cpp -o CMakeFiles/linked_list.dir/src/main.cpp.s
 
 # Object files for target linked_list
 linked_list_OBJECTS = \
@@ -109,7 +109,7 @@ linked_list: CMakeFiles/linked_list.dir/src/LinkedList.cpp.o
 linked_list: CMakeFiles/linked_list.dir/src/main.cpp.o
 linked_list: CMakeFiles/linked_list.dir/build.make
 linked_list: CMakeFiles/linked_list.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable linked_list"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable linked_list"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/linked_list.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/linked_list.dir/clean:
 .PHONY : CMakeFiles/linked_list.dir/clean
 
 CMakeFiles/linked_list.dir/depend:
-	cd /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/cmake-build-debug /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/cmake-build-debug /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles/linked_list.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/cmake-build-debug /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/cmake-build-debug /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles/linked_list.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/linked_list.dir/depend
 

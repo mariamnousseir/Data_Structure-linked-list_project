@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/src/LinkedList.cpp" "CMakeFiles/linked_list.dir/src/LinkedList.cpp.o" "gcc" "CMakeFiles/linked_list.dir/src/LinkedList.cpp.o.d"
-  "/Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/src/main.cpp" "CMakeFiles/linked_list.dir/src/main.cpp.o" "gcc" "CMakeFiles/linked_list.dir/src/main.cpp.o.d"
+  "/Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/src/LinkedList.cpp" "CMakeFiles/linked_list.dir/src/LinkedList.cpp.o" "gcc" "CMakeFiles/linked_list.dir/src/LinkedList.cpp.o.d"
+  "/Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/src/main.cpp" "CMakeFiles/linked_list.dir/src/main.cpp.o" "gcc" "CMakeFiles/linked_list.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -54,10 +54,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project
+CMAKE_SOURCE_DIR = /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/linked_list.dir/clean
 CMakeFiles/linked_list.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target linked_list"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target linked_list"
 .PHONY : CMakeFiles/linked_list.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/linked_list.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/linked_list.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/rdemian/Documents/GitHub/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/janamohamed/CLionProjects/Data_Structure-linked-list_project/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/linked_list.dir/rule
 
 # Convenience name for target.
