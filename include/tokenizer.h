@@ -8,25 +8,25 @@
 using namespace std;
 
 // Node for linked list of tokens
-typedef struct TokenNode {
+typedef struct TokenNode {         //struct for tokens where each TokenNode holds one element (Node) and a pointer that points to the next node
     string token;                 // The token text stored in this node
     TokenNode* next;              // Pointer to the next node in the list
-    TokenNode(const string& t)    // Constructor: initialize token and set next to nullptr
+    TokenNode(const string& t)    // Constructor to initialize token and set next to nullptr
         : token(t), next(nullptr) {
     }
 } TokenNode;
 
-// Linked list for tokens
+// Class representing a linked list for tokens
 class TokenList {
 public:
     TokenNode* head;              // Pointer to the first node in the list
     TokenNode* tail;              // Pointer to the last node in the list
 
-    TokenList()                    // Constructor: initialize head and tail to nullptr (empty list)
+    TokenList()                    // Constructor to initialize head and tail to nullptr (empty list)
         : head(nullptr), tail(nullptr) {
     }
 
-    ~TokenList() {                 // Destructor: delete all nodes to free memory
+    ~TokenList() {                 // Destructor to delete all nodes to free memory
         TokenNode* cur = head;     // Start at the head
         while (cur) {              // Traverse until end of list
             TokenNode* nxt = cur->next; // Keep pointer to next node
