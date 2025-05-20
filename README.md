@@ -60,6 +60,14 @@ Correctly handled out of bounds request
 
 
 
+# Author: Farah Ghorab (ID: 900231162) did the following: 
+
+insertion functions for the data structure linked lists
+insertatFront , insertatEnd , insertAfter , insertatPosition 
+
+Swap nodes function 
+
+Test for each function in the main
 
 
 
@@ -123,6 +131,15 @@ Memory Safety
 Every new TokenList() is paired with a delete.
 
 Stack<string> instances auto-cleanup on scope exit.
+
+
+# Author: Farah Ghorab (ID: 900231162) did the following: 
+
+Converter.h file , did the function of conversion of prefix to infix by reversing tokens and using a stack 
+
+Tokenizer.h file, did the functions ( popFront , reverse , tokenize) 
+
+Methodology and conclusion for code report 
 
 
 
