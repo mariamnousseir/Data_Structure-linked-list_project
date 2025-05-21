@@ -69,6 +69,19 @@ Swap nodes function
 
 Test for each function in the main
 
+# Author: Jana Gouda (ID: 900231584) did the following:
+
+Deletion functions for the data structure linked lists:
+- DeleteAtHead
+- DeleteAtTail
+- DeleteByValue
+- DeleteAtPosition
+- isCircular
+
+Tests for all functions in the main.
+
+
+
 # Author: Raphael demian (ID: 900231263) did the following: 
 Here are the names of the functions from your code:
 helped in the header for the linkedlist
@@ -206,7 +219,12 @@ Tokenizer.h file, did the functions ( popFront , reverse , tokenize)
 
 Methodology and conclusion for code report 
 
+# Author: Jana Gouda (ID: 900231584) did the following:
 
+Converter.h file: implemented the function of conversion from Prefix to Postfix
+Tokenizer.h file: implemented the following functions (struct TokenNode, Class TokenList, Construcor, Destructor, Append, isEmpty)
+
+Algorithm Specifications & Data Specifications in the report
 
 
 # Author: Raphael demian (ID: 900231263) did the following: 
